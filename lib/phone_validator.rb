@@ -37,4 +37,11 @@
 # - Use grouping (...) to group the alternatives
 def valid_phone_number?(phone)
   # TODO: Implement phone number validation using regex
+  return false unless phone.is_a?(String)
+  valid_pattern = /\A
+    (
+      \(\d{3}\) \ \d{3}-\d{4} |
+      \d{3}-\d{3}-\d{4} |
+      \d{10})\z/x
+  phone.match?(valid_pattern)
 end

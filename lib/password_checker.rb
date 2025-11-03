@@ -25,5 +25,12 @@
 # - Use anchors to match the entire string
 def strong_password?(password)
   # TODO: Implement password validation using regex
-  v
+  valid_pattern = /\A
+    (?=.*[A-Z])
+    (?=.*[a-z])
+    (?=.*[0-9])
+    (?=.*[!@$%^#&*])
+    [A-Za-z0-9!@$%#^&*]{8,20}
+  \z/x
+  password.match?(valid_pattern)
 end
