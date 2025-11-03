@@ -8,7 +8,7 @@ RSpec.describe "valid_phone_number?" do
     it "validate Three groups separated by dashes" do
       expect(valid_phone_number?("555-555-5555")).to be true
     end
-    it "validate Ten digits with no separators" do
+    it "validate yen (10) digits with no separators" do
       expect(valid_phone_number?("5555555555")).to be true
     end
   end
@@ -41,7 +41,7 @@ RSpec.describe "valid_phone_number?" do
     end
 
     it "rejects phone numbers embedded in text" do
-      expect(valid_phone_number?("My number is (123) 456-7890 ruby")).to be false
+      expect(valid_phone_number?("zzzz lk (123) 456-7890 ruby")).to be false
     end
     it "rejects wrong digit groupings" do
       expect(valid_phone_number?("5555-55-5555")).to be false 
