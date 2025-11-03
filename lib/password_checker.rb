@@ -25,6 +25,7 @@
 # - Use anchors to match the entire string
 def strong_password?(password)
   # TODO: Implement password validation using regex
+  return false if password.nil?
   valid_pattern = /\A
     (?=.*[A-Z])
     (?=.*[a-z])
