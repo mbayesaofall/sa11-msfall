@@ -25,4 +25,5 @@
 # - Use anchors to match the entire string
 def strong_password?(password)
   # TODO: Implement password validation using regex
+  v
 end
