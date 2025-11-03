@@ -6,7 +6,7 @@ RSpec.describe "valid_phone_number?" do
       expect(valid_phone_number?(valid_number)).to be true
     end
     it "validate Three groups separated by dashes" do
-      expect(valid_phone_number?("555-555-5555")).to be true
+      expect(valid_phone_number?("555-555-7777")).to be true
     end
     it "validate yen (10) digits with no separators" do
       expect(valid_phone_number?("5555555555")).to be true
